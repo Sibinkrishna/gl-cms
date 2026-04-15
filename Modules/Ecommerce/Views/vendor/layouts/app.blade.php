@@ -29,10 +29,11 @@
     @if (\App\Support\ModuleRegistry::enabled('seo') && \Illuminate\Support\Facades\View::exists('seo::meta'))
         @include('seo::meta')
     @endif
+
     <script>
         window.adminPreferredTheme = @json($adminPreferredTheme);
     </script>
-    @include('admin.layouts.partials.head-css')
+    @include('ecommerce::vendor.layouts.partials.head-css')
     @if (filled($adminSettings['admin_primary_color'] ?? null) ||
             filled($adminSettings['admin_topbar_bg'] ?? null) ||
             filled($adminSettings['admin_topbar_text_color'] ?? null) ||
@@ -170,14 +171,14 @@
 
 <body>
     <div class="wrapper">
-        @include('admin.layouts.partials.topbar')
-        @include('admin.layouts.partials.main-nav')
+        @include('ecommerce::vendor.layouts.partials.topbar')
+        @include('ecommerce::vendor.layouts.partials.main-nav')
         <div class="page-content pt-3">
             @yield('content')
         </div>
     </div>
-    @include('admin.layouts.partials.toast')
-    @include('admin.layouts.partials.vendor-scripts')
+    @include('ecommerce::vendor.layouts.partials.toast')
+    @include('ecommerce::vendor.layouts.partials.vendor-scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const darkBackground = '#1f2937';
@@ -259,7 +260,7 @@
             });
         });
     </script>
-    <script>
+    /* <script>
         let timeout;
 
         function resetTimer() {
@@ -272,7 +273,7 @@
         document.onload = resetTimer;
         document.onmousemove = resetTimer;
         document.onkeypress = resetTimer;
-    </script>
+    </script> */
     @stack('scripts')
 </body>
 

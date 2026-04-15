@@ -9,13 +9,13 @@
      <!-- Sidebar Logo -->
      <div class="logo-box">
           <a href="{{ $routeUrl('admin.dashboard') }}" class="logo-dark">
-               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-sm.png') }}" class="logo-sm" alt="logo sm">
-               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-dark.png') }}" class="logo-lg" alt="logo dark">
+               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-sm.png') }}" class="logo-sm" alt="logo sm" style="max-width: 40px; height: auto; object-fit: contain;">
+               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-dark.png') }}" class="logo-lg" alt="logo dark" style="max-width: 170px; height: auto; object-fit: contain;">
           </a>
 
           <a href="{{ $routeUrl('admin.dashboard') }}" class="logo-light">
-               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-sm.png') }}" class="logo-sm" alt="logo sm">
-               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-light.png') }}" class="logo-lg" alt="logo light">
+               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-sm.png') }}" class="logo-sm" alt="logo sm" style="max-width: 40px; height: auto; object-fit: contain;">
+               <img src="{{ $adminLogo ? asset('storage/' . $adminLogo) : asset('admin/assets/images/logo-light.png') }}" class="logo-lg" alt="logo light" style="max-width: 170px; height: auto; object-fit: contain;">
           </a>
      </div>
 

@@ -188,7 +188,7 @@ class VendorService
 
     public function updateVendorProfile(Vendor $vendor, array $data): Vendor
     {
-        $fillable = ['name', 'email', 'phone', 'description'];
+        $fillable = ['name', 'email', 'phone', 'description', 'logo'];
 
         $updateData = array_filter(
             array_intersect_key($data, array_flip($fillable)),

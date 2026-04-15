@@ -67,6 +67,8 @@ class EcommercePermissionSeeder extends Seeder
             'vendor.products.delete',
             'vendor.orders.view',
             'vendor.orders.update',
+            'vendor.settings.view',
+            'vendor.settings.update',
         ];
 
         foreach ($vendorPermissions as $permission) {

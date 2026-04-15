@@ -22,6 +22,16 @@ class Vendor extends Model
         'status',
         'rejection_reason',
         'approved_at',
+        'bank_name',
+        'bank_account_name',
+        'bank_account_number',
+        'bank_ifsc_code',
+        'paypal_email',
+        'email_notifications',
+        'sms_notifications',
+        'order_notifications',
+        'inventory_notifications',
+        'payout_notifications',
     ];
 
     protected function casts(): array

@@ -3,13 +3,13 @@
         ?? (request()->route()?->getName()
             ? \Modules\Seo\Models\SeoSetting::findFor(request()->route()->getName(), 'route')
             : null)
-        ?? \Modules\Seo\Models\SeoSetting::findFor(request()->path());
+        ?? \Modules\Seo\Models\SeoSetting::findFor(request()->path())
+        ?? \Modules\Seo\Models\SeoSetting::findFor(request()->path(), 'custom');
     $title = $seo?->seo_meta_title;
     $description = $seo?->seo_meta_description;
     $keywords = $seo?->seo_meta_keywords;
     $image = $seo?->ogImageUrl();
 @endphp
-
 @if($seo)
     @if($title)
         <title>{{ $title }}</title>

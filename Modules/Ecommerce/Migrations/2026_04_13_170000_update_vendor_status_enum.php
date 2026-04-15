@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::table('vendors', function (Blueprint $table) {
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending')->change();
-            $table->text('rejection_reason')->nullable()->after('status');
-            $table->timestamp('approved_at')->nullable()->after('rejection_reason');
+            // $table->text('rejection_reason')->nullable()->after('status');
+            // $table->timestamp('approved_at')->nullable()->after('rejection_reason');
         });
     }
 

@@ -99,6 +99,23 @@ class VendorSettingsController extends Controller
         return view('ecommerce::vendor.settings.notifications', ['vendor' => $vendor]);
     }
 
+    public function updateNotifications(Request $request)
+    {
+        $vendor = $this->vendorService->getVendorOrFail($request->user());
+
+        $data = $request->validate([
+            'email_notifications' => 'boolean',
+            'sms_notifications' => 'boolean',
+            'order_notifications' => 'boolean',
+            'inventory_notifications' => 'boolean',
+            'payout_notifications' => 'boolean',
+        ]);
+
+        $vendor->update($data);
+
+        return back()->with('success', 'Notification preferences updated successfully.');
+    }
+
     protected function generateUniqueSlug(Vendor $vendor, string $name): string
     {
         $slug = Str::slug($name);

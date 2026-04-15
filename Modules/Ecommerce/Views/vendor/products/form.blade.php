@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('ecommerce::vendor.layouts.app')
 
 @php
 $selectedTags = old('tag_ids', $product->tags->pluck('id')->all());
